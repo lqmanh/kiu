@@ -1,0 +1,12 @@
+name: kiu
+description: Kiu
+version: 0.0.0
+license: MIT
+authors:
+  - Manh Luong <luongquangmanh85@gmail.com>
+
+crystal: 1.4.1
+
+dependencies:
+
+development_dependencies:
