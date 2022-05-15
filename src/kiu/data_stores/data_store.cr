@@ -1,10 +1,10 @@
 require "../jobs"
 
-module Kiu::Datastores
+module Kiu::DataStores
   alias Job = Jobs::Job
 
-  abstract class Datastore
-    # Namespace for the datastore.
+  abstract class DataStore
+    # Namespace for the data store.
     #
     # Used to differentiate keys, tables,... used by this store from unrelated ones in a shared resource.
     @namespace : String
