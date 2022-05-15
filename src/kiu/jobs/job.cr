@@ -21,15 +21,15 @@ module Kiu::Jobs
 
     property priority : Int8
 
-    macro serializer(serializable, from_f, to_f)
+    macro serializer(serializable, decode_f, encode_f)
       include {{serializable}}
 
       def self.decode(value) : {{@type.id}}
-        {{@type.id}}.{{from_f.id}} value
+        {{@type.id}}.{{decode_f.id}} value
       end
 
       def encode
-        {{to_f.id}}
+        {{encode_f.id}}
       end
     end
 
@@ -75,6 +75,16 @@ module Kiu::Jobs
 
     def never_expire
       @expire_at = nil
+    end
+
+    # Returns the object itself
+    def self.decode(value)
+      value
+    end
+
+    # Returns the object itself
+    def encode
+      self
     end
   end
 end
