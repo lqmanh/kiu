@@ -8,5 +8,13 @@ authors:
 crystal: 1.4.1
 
 dependencies:
+  priority-queue:
+    github: spider-gazelle/priority-queue
+  redis:
+    github: stefanwille/crystal-redis
 
 development_dependencies:
+  timecop:
+    github: crystal-community/timecop.cr
+  ameba:
+    github: crystal-ameba/ameba
